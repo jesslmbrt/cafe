@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --base-color: #6c635a;
+  --text-color: #000000;
+  --primary-color: rgb(82, 55, 55);
+  --secondary-color: #8d8dff;
+  --color-1: #ffffff;
+  --color-2: #f3f7f9;
+  --color-3: #f6f3f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    padding: 2em;
+    font-family: Patrick Hand;
+    font-size: 20px;
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    font-family: Balsamiq Sans, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(82, 55, 55);
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+
+fieldset ul {
+list-style-type: none;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: Balsamiq Sans;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: 4px solid transparent;
+    transition: font-size 0.3s ease;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-size: 10px;
+    background-color: var(--primary-color);
+    color: var(--color-1);
+    font-size: 1.2em;
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.text-container p {
+    margin: .75em 0 1em 0;
+    font-size: 1.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: 1em;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+background-color: rgb(52, 36, 36);
+}
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--color-2);
+    text-align: center;
+}
+
+#coff {
+    border-radius: 15px;
+}
+
+#teamimg {
+    border-radius: 15px;
+}
+
+details {
+    margin-top: 1em;
+    background-color: var(--base-color);
+    border-radius: 1em;
+}
+
+details summary {
+    padding: 1em;
+    font-size: 1rem;
+    font-family: Balsamiq Sans;
+}
+
+details p {
+    padding: 0 2em 2em 2em;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25rem;
+}
+
+section img#menu {
+    float: left;
+    margin-right: 15px;
+}
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "img-1 img-1 img-2 img-3" 
+    "img-1 img-1 img-4 img-5";
+    gap: 1em;
+}
+
+.grid-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container img:hover {
+    scale: 1.05;
+}
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 1em;
+    font-variant: small-caps;
+    font-size: 18px;
+    color:rgb(58, 55, 52)
+}
+
+footer a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover {
+    transform: scale(1.2);
+}
+
+@media(max-width: 988px){
+    header {
+        text-align: center;
+    }
+
+    header .text-container {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 802px) {
+    nav li {
+        display: none;
+    }
+
+nav li:first-child,
+nav li:last-child {
+    display: block;
+}
+
+header {
+    margin-top: 0;
+}
+
+.cta-button {
+    margin-top: .5em;
+    width: 100%
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container p {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+}
